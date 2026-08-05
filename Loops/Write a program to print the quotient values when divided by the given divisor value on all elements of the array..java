@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class main{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int n=scan.nextInt();
+        long[] arr = new long[n];
+        for(int i=0;i<n;i++){
+            arr[i]=scan.nextLong();
+        }
+        long k = scan.nextLong();
+        for(int i=0;i<n;i++){
+            System.out.print((arr[i]/k)+" ");
+        }
+    }
+}
