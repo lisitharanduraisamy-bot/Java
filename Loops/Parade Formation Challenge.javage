@@ -1,0 +1,34 @@
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        int n = scan.nextInt();
+        int[] a = new int[n];
+
+        int max = 0;
+        int min = 0;
+
+        for (int i = 0; i < n; i++) {
+            a[i] = scan.nextInt();
+
+            if (a[i] > a[max]) {
+                max = i;
+            }
+
+            if (a[i] <= a[min]) {
+                min = i;
+            }
+        }
+
+        int swaps = max + (n - 1 - min);
+
+        if (max > min) {
+            swaps--;
+        }
+
+        System.out.println(swaps);
+    }
+}
